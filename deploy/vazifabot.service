@@ -1,0 +1,15 @@
+[Unit]
+Description=Vazifabot, Telegram task list bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=vazifabot
+WorkingDirectory=/home/vazifabot/app
+EnvironmentFile=/home/vazifabot/app/.env
+ExecStart=/usr/local/bin/uv run --frozen --no-dev vazifabot
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

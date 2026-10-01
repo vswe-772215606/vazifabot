@@ -1,0 +1,6 @@
+# the bot token lives here, never in git
+.env
+data/
+.venv/
+__pycache__/
+.pytest_cache/
